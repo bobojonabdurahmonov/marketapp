@@ -83,7 +83,7 @@
       position: absolute;
       display: flex;
       flex-direction: column;
-      margin-top: 200px;
+      margin-top: 1000px;
     }
 
     .buy:disabled {
@@ -150,7 +150,7 @@
         <h1>Sizning Mahsulotlaringiz: </h1>
         <p></p>
         <p>Jami: </p>
-        <button class="btnstyle sendProduct">Rasmiylashtir</button>
+        <button class="btnstyle sendProduct" onclick="buyproduct()">Rasmiylashtir</button>
     </div>
   <footer>
     📞 Aloqa: +998 99 335 85 28 | 📍 Manzil: Paxtachi Tumani , Samarqand viloyati
@@ -210,6 +210,7 @@
 
 
     function buyproduct() {
+      
       const total = products.reduce((sum, p) => sum + p.price, 0);
 
       const data = {
