@@ -211,16 +211,14 @@
 
 
     function buyproduct() {
-      
       const total = products.reduce((sum, p) => sum + p.price, 0);
-
       const data = {
         products: products,
         total: total,
       };
-
+    
       tg.sendData(JSON.stringify(data));
-      tg.close();
+      setTimeout(() => tg.close(), 500); // xavfsiz yopish
     }
   </script>
 </body>
